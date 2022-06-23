@@ -38,8 +38,23 @@
 /* end main design */
 
 /* about design */
-.about{
+.h3{
     text-align: center;
     margin-top: 25px;
 }
 /* end about design */
+
+/*Skills*/
+.skills-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.skills-item-icon{
+ text-align: center;
+ font-weight: bold;
+ font-size: 1em;
+ width: 50px;
+ height: 50px;
+}
+/* end skills*/
