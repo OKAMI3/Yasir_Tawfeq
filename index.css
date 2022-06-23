@@ -40,7 +40,7 @@
 /* about design */
 .h3{
     text-align: center;
-    margin-top: 25px;
+    margin-top: 35px;
 }
 /* end about design */
 
@@ -48,7 +48,7 @@
 .skills-item{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .skills-item-icon{
  text-align: center;
@@ -58,3 +58,15 @@
  height: 50px;
 }
 /* end skills*/
+
+/*project*/
+.project-items{
+    padding: 10px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card{
+    margin:15px;
+}
+/* end of project*/
