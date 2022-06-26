@@ -54,14 +54,18 @@ html{
 .skills-item{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding: 30px;
 }
-.skills-item-icon{
+.skills-item-icon>i{
+ margin: 30px;
  text-align: center;
  font-weight: bold;
- font-size: 1em;
- width: 50px;
- height: 50px;
+ font-size: 4em !important;
+}
+.skills-item-icon>p{
+    font-size: 1em;
+    text-align: center;
 }
 /* end skills*/
 
@@ -90,17 +94,14 @@ html{
 /*footer*/
 
 .footer-main{
+    margin: 0px;
     background-color:#273036;
     color:azure;
     display:flex;
     flex-direction:row;
     justify-content:space-evenly;
 }
-.footer-item-icon>svg{
-    padding:5px;
-    width: 50px;
-    height: 50px;
-}
+
 .footer{
     background-color: #273036;
     color: azure;
@@ -108,6 +109,13 @@ html{
 .footer>p{
     text-align: center;
     margin-top: 40px;
+}
+
+.footer-item-icon>i {
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em !important;
 }
 
 a{
@@ -119,6 +127,8 @@ a:hover{
 color: azure;
 }
 /*end of footer*/
+
+/*text styling*/
 .ml11 {
     font-weight: 700;
     font-size: 1.5em;
@@ -151,3 +161,15 @@ color: azure;
     display: inline-block;
     line-height: 1em;
 }
+/*end text styling*/
+
+
+/* media queries*/
+@media only screen and (max-width: 600px) {
+        .footer-main {
+        flex-direction: column;
+        padding: 0.8em;
+        }
+     
+}
+/*end of media queries*/
