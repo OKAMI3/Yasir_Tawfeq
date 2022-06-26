@@ -15,7 +15,7 @@
   </head>
   <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top " r>
+    <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top " >
       <div class="container-fluid">
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul class="navbar-nav ">
@@ -45,7 +45,12 @@
      <div class="main-info">
        <img class="pro-img" src="https://rb.gy/s8cfcv" alt="profile">
        <h3>Yasir Tawfeq</h3>
-       <code><-p>Frontend Developer<-/p></code>
+       <p class="ml11">
+         <span class="text-wrapper">
+           <span class="line line1"></span>
+            <span class="letters">Frontend developer </span>
+         </span>
+        </p>
        
      </div> 
      </div>
@@ -187,5 +192,39 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+      var textWrapper = document.querySelector('.ml11 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+    easing: "easeOutExpo",
+    duration: 700,
+    delay: 100
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=775',
+    delay: (el, i) => 34 * (i+1)
+  }).add({
+    targets: '.ml11',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+    </script>
   </body>
 </html>
