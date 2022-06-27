@@ -11,7 +11,7 @@
     height: 100%;
     margin-top:100px;
     border: 3px solid black;
-    border-radius: 15px;
+    border-radius: 17px;
 }
 
 .img{
@@ -27,3 +27,12 @@
 }
 
 /*End of unsplash project*/
+
+/* media queries*/
+@media only screen and (max-width: 600px) {
+    .main-card {
+            width: 100%;
+            margin: 0px;
+            margin-top:20px;
+        }
+}
